@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { GridModule } from '@syncfusion/ej2-angular-grids';
+import { PageService, SortService, FilterService, GroupService } from '@syncfusion/ej2-angular-grids';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,9 +10,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    GridModule
   ],
-  providers: [],
+  providers: [PageService, SortService, FilterService, GroupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
